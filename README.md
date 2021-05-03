@@ -5,6 +5,7 @@ Materi 1.0 Bagaimana cara membuat splashscreen pada android dengan menggunakan b
 Upcoming materi
 
 Materi 2.0 Bagaimana cara membuat onboarding screen?
+
 Materi 3.0 Bagaimana menerapkan Firebase Authentication?
  - Materi 3.1 Register dengan Firebase Authentication
  - Materi 3.2 Login dengan Firebase Authentication

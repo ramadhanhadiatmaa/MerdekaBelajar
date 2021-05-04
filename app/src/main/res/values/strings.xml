@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MerdekaBelajar</string>
+    <string name="merdeka">Merdeka</string>
+    <string name="belajar">Belajar</string>
+    <string name="text_boarding1">Mendapatkan pendidikan layak adalah hak semua warga negara</string>
+    <string name="merdeka_belajar">Merdeka Belajar</string>
+    <string name="text_boarding3">Membangun bangsa lewat kebebasan pendidikan</string>
+    <string name="skip">lewati</string>
+    <string name="next">lanjut</string>
+    <string name="text_boarding2">Ilmu yang bermanfaat adalah ilmu yang berguna untuk masyarakat banyak</string>
 </resources>

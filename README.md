@@ -6,7 +6,7 @@ Materi 2.0 Bagaimana cara membuat onboarding screen?
 
 Upcoming materi
 
-Materi 4.0 Bagaimana cara mengganti logo default pada aplikasi yang kita buat?
+Materi 3.0 Bagaimana cara mengganti logo default pada aplikasi yang kita buat?
 
 Materi 4.0 Bagaimana menerapkan Firebase Authentication?
  - Materi 4.1 Register dengan Firebase Authentication

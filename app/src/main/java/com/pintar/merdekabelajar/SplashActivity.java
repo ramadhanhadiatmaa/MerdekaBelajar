@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.pintar.merdekabelajar.onboarding.OnboardingFragment1;
 import com.pintar.merdekabelajar.onboarding.OnboardingFragment2;
 import com.pintar.merdekabelajar.onboarding.OnboardingFragment3;
@@ -25,6 +27,9 @@ public class SplashActivity extends AppCompatActivity {
 
     private static final int NUM_PAGES = 3;
 
+    FirebaseUser firebaseUser;
+    FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +38,8 @@ public class SplashActivity extends AppCompatActivity {
         logo = findViewById(R.id.image_logo);
         background = findViewById(R.id.background);
         viewPager = findViewById(R.id.pager);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
     }
 
@@ -69,22 +76,49 @@ public class SplashActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        // Membuat handler
-        final Handler handler = new Handler();
+        firebaseUser = firebaseAuth.getCurrentUser();
 
-        // Delay activity
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        if (firebaseUser == null){
 
-                // Hal yang dilakukan setelah delay
-                logo.animate().translationY(20000).setDuration(5000); // Set animation
-                background.animate().translationY(-20000).setDuration(5000);
-                pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
-                viewPager.setAdapter(pagerAdapter);
-            }
+            // Membuat handler
+            final Handler handler = new Handler();
 
-            // Delay waktu berapa detik, 3000 berarti sama dengan 3 detik
-        },3000);
+            // Delay activity
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    // Hal yang dilakukan setelah delay
+                    logo.animate().translationY(20000).setDuration(5000); // Set animation
+                    background.animate().translationY(-20000).setDuration(5000);
+                    pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+                    viewPager.setAdapter(pagerAdapter);
+                }
+
+                // Delay waktu berapa detik, 3000 berarti sama dengan 3 detik
+            },3000);
+
+        }else {
+
+            // Membuat handler
+            final Handler handler = new Handler();
+
+            // Delay activity
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    // Hal yang dilakukan setelah delay
+                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                    finish();
+
+                }
+
+                // Delay waktu berapa detik, 3000 berarti sama dengan 3 detik
+            },3000);
+
+        }
+
+
     }
 }

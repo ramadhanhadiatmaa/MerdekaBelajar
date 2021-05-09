@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MerdekaBelajar">
-        <activity android:name=".authentication.ResetActivity"></activity>
+        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".profile.ProfileActivity" />
+        <activity android:name=".authentication.ResetActivity" />
         <activity android:name=".authentication.RegisterActivity" />
         <activity android:name=".authentication.LoginActivity" />
         <activity android:name=".authentication.HelloActivity" />

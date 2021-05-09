@@ -20,4 +20,9 @@
         <item name="colorPrimaryDark">@color/purle</item>
         <item name="colorAccent">@color/purle</item>
     </style>
+
+    <style name="navigationTheme">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+    </style>
 </resources>

@@ -78,8 +78,8 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
 
                 // Hal yang dilakukan setelah delay
-                logo.animate().translationY(20000).setDuration(3000); // Set animation
-                background.animate().translationY(-20000).setDuration(3000);
+                logo.animate().translationY(20000).setDuration(5000); // Set animation
+                background.animate().translationY(-20000).setDuration(5000);
                 pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
                 viewPager.setAdapter(pagerAdapter);
             }

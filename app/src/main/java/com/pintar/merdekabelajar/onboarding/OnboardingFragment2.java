@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import com.pintar.merdekabelajar.MainActivity;
 import com.pintar.merdekabelajar.R;
+import com.pintar.merdekabelajar.authentication.HelloActivity;
 
 public class OnboardingFragment2 extends Fragment {
 
@@ -33,7 +34,7 @@ public class OnboardingFragment2 extends Fragment {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getContext(), MainActivity.class));
+                startActivity(new Intent(getContext(), HelloActivity.class));
                 getActivity().finish();
 
             }

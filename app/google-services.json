@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "983565184657",
+    "firebase_url": "https://merdekabelajarapps-4e376-default-rtdb.firebaseio.com",
+    "project_id": "merdekabelajarapps-4e376",
+    "storage_bucket": "merdekabelajarapps-4e376.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983565184657:android:5036eb3a592c8553115930",
+        "android_client_info": {
+          "package_name": "com.pintar.merdekabelajar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983565184657-4hardg13lde0ue0385jqs6sonlad42d1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhjclJirmuVnqbLJnsuO0-5Vzus05l97s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983565184657-4hardg13lde0ue0385jqs6sonlad42d1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

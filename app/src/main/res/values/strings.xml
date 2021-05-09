@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MerdekaBelajar</string>
+    <string name="app_name">Merdeka Belajar</string>
     <string name="merdeka">Merdeka</string>
     <string name="belajar">Belajar</string>
     <string name="text_boarding1">Mendapatkan pendidikan layak adalah hak semua warga negara</string>
@@ -8,4 +8,18 @@
     <string name="skip">lewati</string>
     <string name="next">lanjut</string>
     <string name="text_boarding2">Ilmu yang bermanfaat adalah ilmu yang berguna untuk masyarakat banyak</string>
+    <string name="text_hello">Disini adalah tempat terbaik untuk mencari kursus gratis</string>
+    <string name="text_login2">Masuk untuk melanjutkan</string>
+    <string name="text_login1">Selamat Datang!</string>
+    <string name="lupa_sandi">Lupa sandi?</string>
+    <string name="tidak_punya_akun_daftar_yuk">Tidak punya akun? Daftar yuk!!</string>
+    <string name="hai">Hai!</string>
+    <string name="buat_akun_baru">Buat akun baru</string>
+    <string name="punya_akun_masuk">Punya akun? Masuk</string>
+    <string name="id_pengguna">ID Pengguna</string>
+    <string name="email">Alamat Surel</string>
+    <string name="password">Sandi</string>
+    <string name="sandi_ulang">Sandi Ulang</string>
+    <string name="periksa_pesan_masuk_atau_spam_untuk_verifikasi_akunmu">Periksa email pesan masuk atau spam untuk verifikasi akunmu</string>
+    <string name="kesalahan">Ada kesalahan saat proses registrasi</string>
 </resources>

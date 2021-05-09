@@ -10,4 +10,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#999999</color>
     <color name="purle">#8244C5</color>
+    <color name="red">#D20000</color>
+    <color name="green">#00D438</color>
 </resources>

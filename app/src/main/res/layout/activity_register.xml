@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authentication.RegisterActivity"
+    android:padding="30dp">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon_back" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bold"
+        android:text="@string/hai"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/buat_akun_baru"
+        android:fontFamily="@font/light"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/userid"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/id_pengguna"
+        app:met_floatingLabelTextColor="@color/grey"
+        app:met_textColorHint="@color/grey"
+        android:textColor="@color/purle"
+        android:hint="@string/id_pengguna"
+        android:fontFamily="@font/light"
+        android:textSize="12sp"
+        app:met_maxCharacters="20"
+        app:met_minCharacters="6"
+        app:met_underlineColor="@color/purle"
+        app:met_helperText="No special character"
+        app:met_helperTextColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/email"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="textEmailAddress"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/email"
+        app:met_floatingLabelTextColor="@color/grey"
+        app:met_textColorHint="@color/grey"
+        android:textColor="@color/purle"
+        android:hint="@string/email"
+        android:fontFamily="@font/light"
+        android:textSize="12sp"
+        app:met_underlineColor="@color/purle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userid" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/password"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/password"
+        app:met_floatingLabelTextColor="@color/grey"
+        app:met_textColorHint="@color/grey"
+        android:textColor="@color/purle"
+        android:hint="@string/password"
+        android:fontFamily="@font/light"
+        android:textSize="12sp"
+        app:met_maxCharacters="8"
+        app:met_minCharacters="8"
+        app:met_underlineColor="@color/purle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/repassword"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/sandi_ulang"
+        app:met_floatingLabelTextColor="@color/grey"
+        app:met_textColorHint="@color/grey"
+        android:textColor="@color/purle"
+        android:hint="@string/sandi_ulang"
+        android:fontFamily="@font/light"
+        android:textSize="12sp"
+        app:met_underlineColor="@color/purle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+
+    <TextView
+        android:id="@+id/punyaakun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="@string/punya_akun_masuk"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/but_daftar"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/but_daftar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repassword"
+        app:srcCompat="@drawable/but_daftar_ungu" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:theme="@style/progressbar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/punyaakun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/but_daftar"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <ImageView
+        android:id="@+id/icon_mail"
+        android:layout_width="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:srcCompat="@drawable/emailred"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/notif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/periksa_pesan_masuk_atau_spam_untuk_verifikasi_akunmu"
+        android:textAlignment="center"
+        android:fontFamily="@font/light"
+        android:textSize="12sp"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_mail"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

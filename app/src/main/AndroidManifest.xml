@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MerdekaBelajar">
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".DetailKategoriActivity"></activity>
+        <activity android:name=".DetailKursusActivity" />
+        <activity android:name=".profile.EditprofilActivity" />
+        <activity android:name=".menu.HelpActivity" />
+        <activity android:name=".menu.FaqActivity" />
+        <activity android:name=".menu.AboutActivity" />
+        <activity android:name=".SearchActivity" />
         <activity android:name=".profile.ProfileActivity" />
         <activity android:name=".authentication.ResetActivity" />
         <activity android:name=".authentication.RegisterActivity" />

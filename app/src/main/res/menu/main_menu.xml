@@ -5,27 +5,27 @@
 
         <item
             android:id="@+id/home"
-            android:title="Home"
+            android:title="@string/menu_beranda"
             android:icon="@drawable/icon_home"/>
 
         <item
             android:id="@+id/account"
-            android:title="Account"
+            android:title="@string/menu_akun"
             android:icon="@drawable/icon_account" />
 
         <item
             android:id="@+id/about"
-            android:title="About Us"
+            android:title="@string/menu_tentang_kami"
             android:icon="@drawable/icon_about"/>
 
         <item
             android:id="@+id/faq"
-            android:title="FAQ"
+            android:title="@string/menu_faq"
             android:icon="@drawable/icon_faq"/>
 
         <item
             android:id="@+id/help"
-            android:title="Help Center"
+            android:title="@string/menu_pusat_bantuan"
             android:icon="@drawable/icon_help"/>
     </group>
 </menu>

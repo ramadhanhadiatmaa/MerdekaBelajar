@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Merdeka Belajar</string>
+    <string name="app_name">MerdekaBelajar</string>
     <string name="merdeka">Merdeka</string>
     <string name="belajar">Belajar</string>
     <string name="text_boarding1">Mendapatkan pendidikan layak adalah hak semua warga negara</string>
@@ -23,4 +23,13 @@
     <string name="periksa_pesan_masuk_atau_spam_untuk_verifikasi_akunmu">Periksa email pesan masuk atau spam untuk verifikasi akunmu</string>
     <string name="kesalahan">Ada kesalahan saat proses registrasi</string>
     <string name="populer">Kursus gratis populer</string>
+    <string name="tentang_kami">Tentang Kami</string>
+    <string name="www_testing_com">www.testing.com</string>
+    <string name="menu_beranda">Beranda</string>
+    <string name="menu_akun">Akun</string>
+    <string name="menu_tentang_kami">Tentang kami</string>
+    <string name="menu_faq">FAQ</string>
+    <string name="menu_pusat_bantuan">Pusat bantuan</string>
+    <string name="kursus_terbaru">Kursus terbaru</string>
+    <string name="kategori">Kategori</string>
 </resources>

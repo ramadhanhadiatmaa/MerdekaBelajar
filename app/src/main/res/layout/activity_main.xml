@@ -19,171 +19,497 @@
         app:itemIconTint="@color/white"
         android:theme="@style/navigationTheme"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/bottom_sheet"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/menu"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/icon_menu"/>
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profil"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="25dp"
-            app:layout_constraintCircleRadius="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardscreen"
-            app:cardCornerRadius="20dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_sheet"
             android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/menu"
-            app:cardBackgroundColor="@color/white">
+            android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/iamge_screen"
+                android:id="@+id/menu"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/icon_menu"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profil"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintCircleRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardscreen"
+                app:cardCornerRadius="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="115dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu"
+                app:cardBackgroundColor="@color/white">
 
-        </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/iamge_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
-        <ImageView
-            android:id="@+id/screen"
-            android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cardscreen"
-            android:elevation="5dp"/>
+            </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/texthello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="12dp"
-            android:text="Hello,"
-            android:elevation="5dp"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/cardscreen"
-            app:layout_constraintEnd_toEndOf="@+id/cardscreen"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/cardscreen"
-            app:layout_constraintTop_toTopOf="@+id/cardscreen"
-            app:layout_constraintVertical_bias="0.0" />
+            <ImageView
+                android:id="@+id/screen"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardscreen"
+                android:elevation="5dp"/>
 
-        <TextView
-            android:id="@+id/nama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="12dp"
-            android:elevation="5dp"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/cardscreen"
-            app:layout_constraintEnd_toEndOf="@+id/cardscreen"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/texthello"
-            app:layout_constraintTop_toTopOf="@+id/cardscreen"
-            app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/texthello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:text="Hello,"
+                android:elevation="5dp"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardscreen"
+                app:layout_constraintEnd_toEndOf="@+id/cardscreen"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cardscreen"
+                app:layout_constraintTop_toTopOf="@+id/cardscreen"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="5dp"
-            android:text="Sudah belajar apa\nhari ini?"
-            android:elevation="5dp"
-            android:fontFamily="@font/regular"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/cardscreen"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/cardscreen"
-            app:layout_constraintTop_toBottomOf="@+id/texthello" />
+            <TextView
+                android:id="@+id/nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="12dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardscreen"
+                app:layout_constraintEnd_toEndOf="@+id/cardscreen"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/texthello"
+                app:layout_constraintTop_toTopOf="@+id/cardscreen"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/cari"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/back_button"
-            android:elevation="5dp"
-            android:fontFamily="@font/bold"
-            android:paddingStart="12dp"
-            android:paddingTop="4dp"
-            android:paddingEnd="12dp"
-            android:paddingBottom="4dp"
-            android:text="Cari Kursus"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/cardscreen"
-            app:layout_constraintEnd_toEndOf="@+id/cardscreen"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/cardscreen"
-            app:layout_constraintTop_toBottomOf="@+id/textView8"
-            app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Sudah belajar apa\nhari ini?"
+                android:elevation="5dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/cardscreen"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cardscreen"
+                app:layout_constraintTop_toBottomOf="@+id/texthello" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="10dp"
-            android:elevation="5dp"
-            app:layout_constraintBottom_toBottomOf="@+id/cardscreen"
-            app:layout_constraintEnd_toEndOf="@+id/cardscreen"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView8"
-            app:layout_constraintTop_toTopOf="@+id/cardscreen"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/view_screen" />
+            <TextView
+                android:id="@+id/cari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/back_button"
+                android:elevation="5dp"
+                android:fontFamily="@font/bold"
+                android:paddingStart="12dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:text="Cari Kursus"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardscreen"
+                app:layout_constraintEnd_toEndOf="@+id/cardscreen"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cardscreen"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/populer"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardscreen" />
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardscreen"
+                app:layout_constraintEnd_toEndOf="@+id/cardscreen"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toTopOf="@+id/cardscreen"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/view_screen" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/populer"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardscreen" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/kursus_terbaru"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerview" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewT"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/kategori"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerviewT" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Akademik"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Bahasa"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Bisnis"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Database"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Data Sains"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Desain"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Fotografi"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Game Dev"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Investasi"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Kantor"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Keuangan"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Komunikasi"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Lifestyle"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Musik"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Pemasaran"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Pemrograman"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Personal"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Sertifikasi"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/back_faq"
+                        android:gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:layout_margin="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

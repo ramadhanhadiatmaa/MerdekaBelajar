@@ -16,8 +16,9 @@ public class User {
     private String rekening;
     private String alengkap;
     private String status;
+    private String fullname;
 
-    public User(String id, String username, String gender, String asal, String lahir, long join, String reputasi, String phone, String email, String verified, String imageurl, String rekening, String alengkap, String status) {
+    public User(String id, String username, String gender, String asal, String lahir, long join, String reputasi, String phone, String email, String verified, String imageurl, String rekening, String alengkap, String status, String fullname) {
         this.id = id;
         this.username = username;
         this.gender = gender;
@@ -32,6 +33,7 @@ public class User {
         this.rekening = rekening;
         this.alengkap = alengkap;
         this.status = status;
+        this.fullname = fullname;
     }
 
     public User() {
@@ -147,5 +149,13 @@ public class User {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 }

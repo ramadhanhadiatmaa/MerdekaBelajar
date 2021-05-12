@@ -152,14 +152,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             if (!TextUtils.isEmpty(email.getText())){
                 if (!TextUtils.isEmpty(password.getText()) && password.length() == 8){
                     but_daftar.setEnabled(true);
+                    but_daftar.setBackgroundResource(R.drawable.but_daftar_ungu);
                 }else {
                     but_daftar.setEnabled(false);
+                    but_daftar.setBackgroundResource(R.drawable.but_daftar_abu);
                 }
             }else {
                 but_daftar.setEnabled(false);
+                but_daftar.setBackgroundResource(R.drawable.but_daftar_abu);
             }
         }else {
             but_daftar.setEnabled(false);
+            but_daftar.setBackgroundResource(R.drawable.but_daftar_abu);
         }
     }
 
@@ -208,7 +212,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
                                     HashMap<String, Object> userdata = new HashMap<>();
                                     userdata.put("id", useridd);
-                                    userdata.put("username", userid.getText().toString().toLowerCase());
+                                    userdata.put("username", userid.getText().toString());
                                     userdata.put("gender", "");
                                     userdata.put("asal", "");
                                     userdata.put("lahir", "");
@@ -221,6 +225,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                     userdata.put("rekening", "");
                                     userdata.put("alengkap", "");
                                     userdata.put("status", "offline");
+                                    userdata.put("fullname", "");
 
                                     databaseReference.setValue(userdata).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override

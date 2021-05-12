@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -26,12 +27,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.pintar.merdekabelajar.adapter.CateAdapter;
 import com.pintar.merdekabelajar.adapter.PopAdapter;
 import com.pintar.merdekabelajar.authentication.HelloActivity;
 import com.pintar.merdekabelajar.authentication.ResetActivity;
 import com.pintar.merdekabelajar.menu.AboutActivity;
 import com.pintar.merdekabelajar.menu.FaqActivity;
 import com.pintar.merdekabelajar.menu.HelpActivity;
+import com.pintar.merdekabelajar.model.CateModel;
 import com.pintar.merdekabelajar.model.PopModel;
 import com.pintar.merdekabelajar.model.User;
 import com.pintar.merdekabelajar.profile.ProfileActivity;
@@ -60,11 +63,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     static final float END_SCALE = 0.7f;
 
-    RecyclerView recyclerView, recyclerViewT;
+    RecyclerView recyclerView, recyclerViewT, recyclerViewC;
 
     List<PopModel> popModelList, popModelListT;
+    List<CateModel> cateModelList;
 
     PopAdapter popAdapter, popAdapterT;
+    CateAdapter cateAdapter;
 
     DatabaseReference databaseReference;
 
@@ -83,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bottomsheet = findViewById(R.id.bottom_sheet);
         recyclerView = findViewById(R.id.recyclerview);
         recyclerViewT = findViewById(R.id.recyclerviewT);
+        recyclerViewC = findViewById(R.id.recyclerViewCate);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -108,12 +114,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         recyclerViewT.setAdapter(popAdapterT);
 
+        recyclerViewC.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager3 = new LinearLayoutManager(this);
+        linearLayoutManager3.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recyclerViewC.setLayoutManager(linearLayoutManager3);
+        cateModelList = new ArrayList<>();
+        cateAdapter = new CateAdapter(this, cateModelList);
+
+        recyclerViewC.setAdapter(cateAdapter);
+
         screen();
         profilhome();
         navigationDrawer();
         horizontalList();
         horizontalListTerbaru();
+        kategori();
 
+    }
+
+    private void kategori() {
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Kategori");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if (snapshot.hasChildren()){
+                    cateModelList.clear();
+                    for (DataSnapshot dss: snapshot.getChildren()){
+                        final CateModel model = dss.getValue(CateModel.class);
+                        cateModelList.add(model);
+                    }
+                    cateAdapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void horizontalListTerbaru() {

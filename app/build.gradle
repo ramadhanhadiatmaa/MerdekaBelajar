@@ -56,6 +56,9 @@ dependencies {
     //shimmer
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
+    // Expandable
+    implementation 'com.github.florent37:expansionpanel:1.2.4'
+
     implementation 'com.google.firebase:firebase-analytics:18.0.3'
     implementation 'com.google.firebase:firebase-auth:20.0.4'
     implementation 'com.google.firebase:firebase-messaging:21.1.0'

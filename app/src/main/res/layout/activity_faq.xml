@@ -6,23 +6,208 @@
     android:layout_height="match_parent"
     tools:context=".menu.FaqActivity">
 
-    <TextView
-        android:id="@+id/textView6"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/back_faq"
-        android:fontFamily="@font/extrabold"
-        android:padding="20dp"
-        android:text="Apa Yang Bisa Kami Bantu?"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/back_faq"
+                android:fontFamily="@font/extrabold"
+                android:padding="20dp"
+                android:text="Apa Yang Bisa Kami Bantu?"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:id="@+id/lin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp">
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    android:id="@+id/header1"
+                    app:expansion_headerIndicator="@id/headerIndicator1"
+                    app:expansion_layout="@id/expansionLayout1"
+                    app:expansion_toggleOnClick="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Siapa saja yang bisa mendaftar di Merdeka Belajar?"
+                        android:textColor="@color/purle"
+                        android:fontFamily="@font/bold"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="25dp"/>
+
+                    <ImageView
+                        android:adjustViewBounds="true"
+                        android:id="@+id/headerIndicator1"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_height="20dp"
+                        android:layout_width="20dp"
+                        app:srcCompat="@drawable/ic_arrow_up" />
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayout1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Semua orang dapat mendaftar di Merdeka Belajar tanpa terkecuali."
+                        android:textColor="@color/grey"
+                        android:fontFamily="@font/regular"
+                        android:textSize="14sp" />
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/lin1"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp">
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    app:expansion_headerIndicator="@id/headerIndicator2"
+                    app:expansion_layout="@id/expansionLayout2"
+                    app:expansion_toggleOnClick="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Apa itu aplikasi Merdeka Belajar?"
+                        android:textColor="@color/purle"
+                        android:fontFamily="@font/bold"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="25dp"/>
+
+                    <ImageView
+                        android:adjustViewBounds="true"
+                        android:id="@+id/headerIndicator2"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_height="20dp"
+                        android:layout_width="20dp"
+                        app:srcCompat="@drawable/ic_arrow_up" />
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayout2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aplikasi Merdeka Belajar adalah sebuah plaform non-profit yang sadar akan kesetaraan pendidikan bagi seluruh rakyat Indonesia."
+                        android:textColor="@color/grey"
+                        android:fontFamily="@font/regular"
+                        android:textSize="14sp" />
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/lin2"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp">
+
+                <com.github.florent37.expansionpanel.ExpansionHeader
+                    app:expansion_headerIndicator="@id/headerIndicator3"
+                    app:expansion_layout="@id/expansionLayout3"
+                    app:expansion_toggleOnClick="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Bagaimana cara mendaftar di Merdeka Belajar?"
+                        android:textColor="@color/purle"
+                        android:fontFamily="@font/bold"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="25dp"/>
+
+                    <ImageView
+                        android:adjustViewBounds="true"
+                        android:id="@+id/headerIndicator3"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_height="20dp"
+                        android:layout_width="20dp"
+                        app:srcCompat="@drawable/ic_arrow_up" />
+
+                </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                <com.github.florent37.expansionpanel.ExpansionLayout
+                    android:id="@+id/expansionLayout3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Setelah kamu mendownload aplikasi Merdeka Belajar di Playstore, buka aplikasinya maka kamu akan menuju ke tampilan untuk pendaftaran."
+                        android:textColor="@color/grey"
+                        android:fontFamily="@font/regular"
+                        android:textSize="14sp" />
+
+                </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

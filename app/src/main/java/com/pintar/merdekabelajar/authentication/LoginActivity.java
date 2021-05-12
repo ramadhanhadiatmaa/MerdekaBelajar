@@ -101,15 +101,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if(!TextUtils.isEmpty(password.getText())){
 
                 daftar.setEnabled(true);
+                daftar.setBackgroundResource(R.drawable.but_masuk_ungu);
 
             }else{
 
                 daftar.setEnabled(false);
+                daftar.setBackgroundResource(R.drawable.but_masuk_abu);
 
             }
         }else{
 
             daftar.setEnabled(false);
+            daftar.setBackgroundResource(R.drawable.but_masuk_abu);
 
         }
     }
